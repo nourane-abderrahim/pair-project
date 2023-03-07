@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="style.css">
+     
+</head>
+<body class="body">
+
+    <div class="container">
+        <div class="nav">
+            <h2 class="logo">FooDy</h2>
+            <img class ="img" src ="https://cdn.pixabay.com/photo/2017/02/21/08/49/food-2085075_960_720.png" > 
+        </div>
+            <div class="menu">
+            <ul>
+                <li> <a href ="">HOME</a></li>
+                <li> <a href ="">REGION</a></li>
+                <li> <a href ="">ABOUT</a></li>
+            </ul>
+        </div>
+        <div class ="search-box">
+            <button  class="search-txt" type="text" name="Type To Search"> <a href="index3.html">Type To Search </a></button>
+            <a  class="search-btn" href="index3.html"> <img class="img-search"  src="search-icon.png"> </a>
+         </div>
+
+         <section>
+         <div class ='login'>
+            <div class="form-value">
+            <form class="login-form"> 
+                <h2>Login</h2>
+                <label>Name</label>
+                <input id="userName" type="text" placeholder="Enter Username" value=""/><br>
+                <label>Password</label>
+                <input id="userPw" type="password" placeholder="Enter Password" value=""/>
+                
+            </form>
+            
+            <input class="button-32" type="submit" value="Login" onClick="check()"/> 
+            <a class="" onclick = "window.location.href='index2.html';"> sing up </a> 
+        </div>
+</div>
+
+</section>
+<div class="slider-frame">
+<div class="slide-img">
+    <div class="img-container">
+    <img src="pictures/img1.jpeg">
+    </div>
+    <div class="img-container">
+    <img src="pictures/img2.jpg">
+    </div>
+    <div class="img-container">
+    <img src="pictures/img3.jpg">
+    </div>
+    <div class="img-container">
+    <img src="pictures/img4.jpg">
+    </div>
+    <div class="img-container">
+        <img src="pictures/img10.jpg">
+            </div>
+    <div class="img-container">
+    <img src="pictures/img6.jpg">
+     </div>
+     <div class="img-container">
+        <img src="pictures/img7.jpg">
+            </div>
+    <div class="img-container">
+    <img src="pictures/img8.jpg">
+    </div>
+    <div class="img-container">
+    <img src="pictures/img9.jpeg">
+     </div>
+     <div class="img-container">
+        <img src="pictures/img5.jpg">
+            </div>
+
+</div>
+</div>
+
+<div class="wrapper">
+    <p>Height in CM:</p>
+    <input type="text" id ="height"> <br> <span id="h_error"></span>
+</p>
+<p>Weight in KG:
+    <input type="text" id="weight"><br><span id="w_error"></span>
+</p>
+<button id="btn"> Calculate</button>
+<p id="output"></p>
+</div>
+            
+
+</div>
+        
+  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="main.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js%22%3E"> </script>
+</body>
+</html>
