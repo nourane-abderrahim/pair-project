@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container2">
+        <div class="nav">
+            <h2 class="logo">FooDy</h2>
+            <img class ="img" src ="https://cdn.pixabay.com/photo/2017/02/21/08/49/food-2085075_960_720.png" > 
+        </div>
+        <section class="section3">
+ <div class="box2">
+    <h1 id="h1-index3">Restaurant Search</h1>
+    <label for="food-search">Search for a type of food:</label> 
+    <input type="text" id="food-search"> <br>
+
+    <button id="btnS" onclick="search()">Search</button>
+   <button id ='alertbtn' onclick="alert('Your Order is On')">Order </button>
+
+
+</div>
+</section>
+
+<div class="div-result">
+    <div id="results"></div>
+</div>
+</div>
+    <script>
+   var restaurants = [
+    {
+        name: "Ariana restaurent ",
+        picture: "pictures/makloub.jpg",
+        food: ["makloub"]
+      },
+      {
+        name: "Pizza Place",
+        picture: "pictures/img-resto.jpg",
+        food: ["pizza"]
+      },
+      {
+        name: "Pasta Restaurant",
+        picture: "pictures/pasta-resto.jpg",
+        food: ["pasta"]
+      },
+      {
+        name: "Healthy restaurant ",
+        picture: "pictures/salade-resto.jpg",
+        food: ["salade"]
+      },
+      {
+        name: "Eat Healthy ",
+        picture: "pictures/healthy.jpg",
+        food: ["juice"]
+      }
+    ];
+
+    function search() {
+        var searchInput = document.getElementById("food-search");
+        var searchValue = searchInput.value.toLowerCase();
+
+        var matchingRestaurants = [];
+
+        for (var i = 0; i < restaurants.length; i++) {
+          var restaurant = restaurants[i];
+
+          for (var j = 0; j < restaurant.food.length; j++) {
+            var food = restaurant.food[j].toLowerCase();
+
+            if (food.includes(searchValue)) {
+              matchingRestaurants.push(restaurant);
+              break;
+            }
+          }
+        }
+
+        displayResults(matchingRestaurants);
+      }
+     
+      function displayResults(restaurants) {
+        var resultsDiv = document.getElementById("results");
+
+        // Clear previous results
+        resultsDiv.innerHTML = "";
+
+        for (var i = 0; i < restaurants.length; i++) {
+          var restaurant = restaurants[i];
+
+          var restaurantDiv = document.createElement("div");
+          restaurantDiv.classList.add("restaurant");
+
+          var name = document.createElement("h2");
+          name.textContent = restaurant.name;
+
+          var picture = document.createElement("img");
+          picture.src = restaurant.picture;
+          picture.alt = restaurant.name;
+
+          restaurantDiv.appendChild(name);
+          restaurantDiv.appendChild(picture);
+          resultsDiv.appendChild(restaurantDiv);
+        }
+      }
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
+
+    
+    
